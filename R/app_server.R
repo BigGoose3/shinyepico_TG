@@ -226,13 +226,13 @@ app_server <- function(input, output, session) {
         
         if(nProbes >= 622000 & nProbes <= 623000){
           
-          if (!requireNamespace("IlluminaHumanMethylation450kanno.ilmn12.hg19", quietly = TRUE) |
-              !requireNamespace("IlluminaHumanMethylation450kmanifest", quietly = TRUE))
+          if (!requireNamespace("IlluminaHumanMethylationEPICv2anno.20a1.hg38", quietly = TRUE) |
+              !requireNamespace("IlluminaHumanMethylationEPICv2manifest", quietly = TRUE))
           {
             showModal(
               modalDialog(
                 title = "Missing package(s)",
-                "450k annotation or manifest packages are not available. Please, install IlluminaHumanMethylation450kmanifest and IlluminaHumanMethylation450kanno.ilmn12.hg19 packages and restart the application.",
+                "EPICv2 annotation or manifest packages are not available. Please, install IlluminaHumanMethylationEPICv2manifest and IlluminaHumanMethylationEPICv2anno.20a1.hg38 packages and restart the application.",
                 easyClose = TRUE,
                 footer = NULL
               )
@@ -241,21 +241,21 @@ app_server <- function(input, output, session) {
           
           validate(
             need(
-              requireNamespace("IlluminaHumanMethylation450kanno.ilmn12.hg19", quietly = TRUE) &
-                requireNamespace("IlluminaHumanMethylation450kmanifest", quietly = TRUE),
-              "450k annotation or manifest packages are not available. Please, install IlluminaHumanMethylation450kmanifest and IlluminaHumanMethylation450kanno.ilmn12.hg19 packages."
+              requireNamespace("IlluminaHumanMethylationEPICv2anno.20a1.hg38", quietly = TRUE) &
+                requireNamespace("IlluminaHumanMethylationEPICv2manifest", quietly = TRUE),
+              "EPICv2 annotation or manifest packages are not available. Please, install IlluminaHumanMethylationEPICv2manifest and IlluminaHumanMethylationEPICv2anno.20a1.hg38 packages."
             )
           )
         }
         else if (nProbes >= 1032000 & nProbes <= 1053000){
           
-          if (!requireNamespace("IlluminaHumanMethylationEPICanno.ilm10b4.hg19", quietly = TRUE) |
-              !requireNamespace("IlluminaHumanMethylationEPICmanifest", quietly = TRUE))
+          if (!requireNamespace("IlluminaHumanMethylationEPICv2anno.20a1.hg38", quietly = TRUE) |
+              !requireNamespace("IlluminaHumanMethylationEPICv2manifest", quietly = TRUE))
           {
             showModal(
               modalDialog(
                 title = "Missing package(s)",
-                "EPIC annotation or manifest packages are not available. Please, install IlluminaHumanMethylationEPICmanifest and IlluminaHumanMethylationEPICanno.ilm10b4.hg19 packages and restart the application.",
+                "EPIC annotation or manifest packages are not available. Please, install IlluminaHumanMethylationEPICv2manifest and IlluminaHumanMethylationEPICv2anno.20a1.hg38 packages and restart the application.",
                 easyClose = TRUE,
                 footer = NULL
               )
@@ -264,9 +264,9 @@ app_server <- function(input, output, session) {
 
           validate(
             need(
-              requireNamespace("IlluminaHumanMethylationEPICanno.ilm10b4.hg19", quietly = TRUE) &
-                requireNamespace("IlluminaHumanMethylationEPICmanifest", quietly = TRUE),
-              "EPIC annotation or manifest packages are not available. Please, install IlluminaHumanMethylationEPICmanifest and IlluminaHumanMethylationEPICanno.ilm10b4.hg19 packages."
+              requireNamespace("IlluminaHumanMethylationEPICv2anno.20a1.hg38", quietly = TRUE) &
+                requireNamespace("IlluminaHumanMethylationEPICv2manifest", quietly = TRUE),
+              "EPIC annotation or manifest packages are not available. Please, install IlluminaHumanMethylationEPICv2manifest and IlluminaHumanMethylationEPICv2anno.20a1.hg38 packages."
             )
           )
         }
